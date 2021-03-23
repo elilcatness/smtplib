@@ -67,7 +67,7 @@ def send_mail(email, subject, text, attachments):
         server.send_message(msg)
         server.quit()
         return True
-    except Exception as e:
+    except smtplib.SMTPException:
         return False
 
 

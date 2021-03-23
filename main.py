@@ -17,7 +17,7 @@ def post_form():
     email = request.values.get('email')
     return ('Письмо отправлено успешно на адрес %s' % email
             if send_mail(email, 'Тестовое письмо', 'Тестовый текст',
-                         ['.'])
+                         ['.', 'templates', '.git'])
             else 'Во время отправки письма на адрес %s произошла ошибка' % email)
 
 
